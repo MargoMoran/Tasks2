@@ -42,16 +42,18 @@ public class Tasks {
                 return "Ты - мутант!";
         }
     }
+
     public static String whichDay(String day) {
         if (day.equalsIgnoreCase("суббота") || day.equalsIgnoreCase("воскресенье")) return "Выходной!";
         else if (day.equalsIgnoreCase("понедельник") || day.equalsIgnoreCase("вторник") || day.equalsIgnoreCase("среда") || day.equalsIgnoreCase("четверг") || day.equalsIgnoreCase("пятница"))
             return "Будний=(";
         else return "Ты неправильно ввел день недели";
     }
+
     public static int maxOfArray(int[] array) {
-        Arrays.sort(array);
-        return array[array.length - 1];
+        int max = array[0];
+        for (int x = 1; x < array.length; x++) max = Math.max(max, array[x]);
+        return max;
     }
 
 }
-

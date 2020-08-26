@@ -32,8 +32,8 @@ public class Tests {
 
     @Test
     public void fifthTest() {
-        int [] array1 = {1, 3, 5, 0, 2};
-        System.out.println(maxOfArray(array1));
+        int[] array = {1, 3, 5, 0, 2};
+        System.out.println(maxOfArray(array));
     }
 }
 
