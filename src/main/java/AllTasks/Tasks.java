@@ -1,5 +1,7 @@
 package AllTasks;
 
+import java.util.Arrays;
+
 public class Tasks {
     public static String whatSeason(String season) {
         switch (season.toLowerCase()) {
@@ -40,11 +42,16 @@ public class Tasks {
                 return "Ты - мутант!";
         }
     }
-
     public static String whichDay(String day) {
         if (day.equalsIgnoreCase("суббота") || day.equalsIgnoreCase("воскресенье")) return "Выходной!";
         else if (day.equalsIgnoreCase("понедельник") || day.equalsIgnoreCase("вторник") || day.equalsIgnoreCase("среда") || day.equalsIgnoreCase("четверг") || day.equalsIgnoreCase("пятница"))
             return "Будний=(";
         else return "Ты неправильно ввел день недели";
     }
+    public static int maxOfArray(int[] array) {
+        Arrays.sort(array);
+        return array[array.length - 1];
+    }
+
 }
+
