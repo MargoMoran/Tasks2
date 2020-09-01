@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
+import java.util.Arrays;
 
 import static AllTasks.Tasks.*;
 
@@ -35,5 +35,10 @@ public class Tests {
         int[] array = {1, 3, 5, 0, 2};
         System.out.println(maxOfArray(array));
     }
-}
 
+    @Test
+    public void sixthTest() {
+        int[] array2 = {1, 3, 5, 0, 2};
+        System.out.println(Arrays.toString(reversedArray(array2)));
+    }
+}

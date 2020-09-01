@@ -1,7 +1,5 @@
 package AllTasks;
 
-import java.util.Arrays;
-
 public class Tasks {
     public static String whatSeason(String season) {
         switch (season.toLowerCase()) {
@@ -56,4 +54,12 @@ public class Tasks {
         return max;
     }
 
+    public static int[] reversedArray(int[] array2) {
+        for (int i = 0; i < array2.length / 2; i++) {
+            int res = array2[i];
+            array2[i] = array2[array2.length - 1 - i];
+            array2[array2.length - 1 - i] = res;
+        }
+        return array2;
+    }
 }
