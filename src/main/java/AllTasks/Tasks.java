@@ -50,7 +50,11 @@ public class Tasks {
 
     public static int maxOfArray(int[] array) {
         int max = array[0];
-        for (int x = 1; x < array.length; x++) max = Math.max(max, array[x]);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
         return max;
     }
 
@@ -61,5 +65,35 @@ public class Tasks {
             array2[array2.length - 1 - i] = res;
         }
         return array2;
+    }
+
+    public static int[] twoMax(int[] array3) {
+        int max1 = array3[0];
+        int max2 = array3[1];
+        for (int i = 0; i < array3.length; i++)
+            if (array3[i] > max1) {
+                max1 = array3[i];
+            }
+        for (int i = 0; i < array3.length; i++)
+            if (max1 > array3[i] && array3[i] > max2) {
+                max2 = array3[i];
+            }
+        int[] myResultArray = new int[2];
+        myResultArray[0] = max1;
+        myResultArray[1] = max2;
+
+        return myResultArray;
+    }
+
+    public static int getNum(int[] array) {
+        int NumCount = 0;
+        int num = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (((array[i] % 2) == 0) && ((array[i] % 3) != 0)) {
+                array[i] = num;
+                NumCount++;
+            }
+        }
+        return NumCount;
     }
 }
