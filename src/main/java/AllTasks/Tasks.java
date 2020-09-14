@@ -96,4 +96,25 @@ public class Tasks {
         }
         return NumCount;
     }
+
+    public static String mostFrequentNum(int[] array) {
+        int NumCount = 0;
+        int Count;
+        int freqNum = array[0];
+        int num;
+        for (int i = 0; i < array.length - 1; i++) {
+            num = array[i];
+            Count = 0;
+            for (int i2 = 1; i2 < array.length; i2++) {
+                if (num == array[i2]) {
+                    Count++;
+                }
+            }
+            if (Count > NumCount) {
+                freqNum = num;
+                NumCount = Count;
+            }
+        }
+        return "Most frequent number: " + freqNum + ". Count: " + NumCount;
+    }
 }

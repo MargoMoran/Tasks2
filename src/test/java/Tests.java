@@ -1,7 +1,5 @@
 import org.testng.annotations.Test;
 
-import java.io.UncheckedIOException.*;
-
 import java.util.Arrays;
 
 import static AllTasks.Tasks.*;
@@ -56,4 +54,9 @@ public class Tests {
         System.out.println(getNum(array4));
     }
 
+    @Test
+    public void ninthTest() throws Exception {
+        int[] array5 = {10, 15, 2, 324, -10, 7, 4, 15, 12, 15, 0, 15, 15, 12, 1, -2, 6, 15, 2};
+        System.out.println(mostFrequentNum(array5));
+    }
 }
